@@ -5,34 +5,33 @@ public class Test6 {
         Mobil mobil = new Mobil("Mobil");
         Becak becak = new Becak("Becak");
         
-        System.out.println("Sepeda memiliki: " + sepeda.getJumlahRoda() + " roda");
-        System.out.println("Sepeda motor memiliki: " + sepedaMotor.getJumlahRoda() + " roda");
-        System.out.println("Mobil memiliki: " + mobil.getJumlahRoda() + " roda");
-        System.out.println("Becak memiliki: " + becak.getJumlahRoda() + " roda");
-
         String namaSepeda = sepeda.getName();
+        Integer rodaSepeda = sepeda.getJumlahRoda();
         Boolean tentangSepeda = sepeda.getMemilikiMesinPembakaran() && sepeda.getMemilikiPolusi();
-        hasil(namaSepeda, tentangSepeda);
+        hasil(namaSepeda, rodaSepeda, tentangSepeda);
 
         String namaSepedaMotor = sepedaMotor.getName();
+        Integer rodaSepedaMotor = sepedaMotor.getJumlahRoda();
         Boolean tentangSepedaMotor = sepedaMotor.getMemilikiMesinPembakaran() && sepedaMotor.getMemilikiPolusi();
-        hasil(namaSepedaMotor, tentangSepedaMotor);
+        hasil(namaSepedaMotor, rodaSepedaMotor, tentangSepedaMotor);
 
         String namaMobil = mobil.getName();
+        Integer rodaMobil = mobil.getJumlahRoda();
         boolean tentangMobil = mobil.getMemilikiMesinPembakaran() && mobil.getMemilikiPolusi();
-        hasil(namaMobil, tentangMobil);
+        hasil(namaMobil, rodaMobil, tentangMobil);
 
         String namaBecak = becak.getName();
+        Integer rodaBecak = becak.getJumlahRoda();
         boolean tentangBecak = becak.getMemilikiMesinPembakaran() && becak.getMemilikiPolusi();
-        hasil(namaBecak, tentangBecak);
+        hasil(namaBecak, rodaBecak, tentangBecak);
     }
 
 
-    static void hasil (String nama, Boolean about){
+    static void hasil (String nama, Integer roda, Boolean about){
         if (about == true){
-            System.out.println(nama + " memiliki mesin pembakaran dan menghasilkan polusi");
+            System.out.println(nama + " memiliki " + roda + " roda, mesin pembakaran dan menghasilkan polusi");
         } else {
-            System.out.println(nama + " tidak memiliki mesin pembakaran dan tidak menghasilkan polusi");
+            System.out.println(nama + " memiliki " + roda + " roda dan tidak memiliki mesin pembakaran juga tidak menghasilkan polusi");
         }
     }
 }

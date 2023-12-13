@@ -34,10 +34,12 @@ class SepedaMotor extends Sepeda {
         super(nama);
     }
 
+    @Override
     public Boolean getMemilikiMesinPembakaran(){
         return mesinPembakaran = true;
     }
 
+    @Override
     public Boolean getMemilikiPolusi(){
         return polusi = true;
     }
@@ -49,14 +51,17 @@ class Mobil extends Sepeda{
         super(nama);
     }
 
+    @Override
     public Integer getJumlahRoda(){
         return roda * 2;
     }
 
+    @Override
     public Boolean getMemilikiMesinPembakaran(){
         return mesinPembakaran = true;
     }
 
+    @Override
     public Boolean getMemilikiPolusi(){
         return polusi = true;
     }
@@ -67,14 +72,17 @@ class Becak extends Sepeda{
         super(nama);
     }
 
+    @Override
     public Integer getJumlahRoda(){
         return roda * 3/2;
     }
 
+    @Override
     public Boolean getMemilikiMesinPembakaran(){
         return mesinPembakaran;
     }
 
+    @Override
     public Boolean getMemilikiPolusi(){
         return polusi;
     }
